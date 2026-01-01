@@ -22,7 +22,7 @@ async def menu(message: types.Message):
         ],
         [
             types.InlineKeyboardButton(text='Важная информ.', callback_data='info'),
-            types.InlineKeyboardButton(text='Ссылки на беседы групп', callback_data=''),
+            types.InlineKeyboardButton(text='Ссылки на беседы групп', callback_data='lincs'),
         ]
     ]
 
