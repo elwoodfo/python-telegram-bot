@@ -1,6 +1,7 @@
 import asyncio
 import os
 from aiogram import Dispatcher, types, Bot, F
+from dotenv import load_dotenv
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import Command
@@ -89,6 +90,7 @@ async def homework(callback: types.CallbackQuery):
 
 
 async def main():
+    load_dotenv()
     print("DEBUG BOT_TOKEN:", repr(os.getenv("BOT_TOKEN")))
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     if not BOT_TOKEN:
