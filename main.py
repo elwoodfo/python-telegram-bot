@@ -10,7 +10,7 @@ from aiogram.filters import Command
 dp = Dispatcher()
 
 @dp.message(Command("start"))
-async def menu(message: types.Message):
+async def menu_start(message: types.Message):
     kb = [
         [
             types.InlineKeyboardButton(text='Д/З', callback_data='Homework'),
@@ -57,7 +57,7 @@ async def menu(query: types.CallbackQuery):
     )
 
 @dp.callback_query(F.data == 'menu_dop')
-async def menu(query: types.CallbackQuery):
+async def menu_dop(query: types.CallbackQuery):
     kb = [
         [
             types.InlineKeyboardButton(text='Д/З', callback_data='Homework'),
